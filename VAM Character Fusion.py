@@ -5,6 +5,7 @@ import copy
 import math as m
 import random
 import tkinter as tk
+import shutil
 from tkinter import filedialog
 from PIL import ImageTk, Image
 
@@ -14,6 +15,7 @@ APP_HEIGHT = 628
 APP_HORIZONTAL_OFFSET = 300
 APP_VERTICAL_OFFSET = 300
 NO_THUMBNAIL_PATH = r"no_thumbnail.jpg"
+CHILD_THUMBNAIL_PATH = r"child_thumbnail.jpg" 
 
 class AppWindow(tk.Frame):
     def __init__(self):
@@ -280,6 +282,9 @@ def save_appearance(appearance, filename):
     with open(filename, 'w', encoding="utf-8") as json_file:
         print("Writing appearance to:", filename)
         json.dump(appearance, json_file, indent=3)
+    # copy a vam character fusion thumbnail as well
+    thumbnailpath = os.path.splitext(filename)[0]+'.jpg'
+    shutil.copyfile(CHILD_THUMBNAIL_PATH, thumbnailpath)
     return True    
     
 
@@ -340,6 +345,8 @@ def intuitive_crossover(morph1, morph2):
     
 def non_uniform_mutation(morph):
     ''' select a random gene, and apply non_uniform mutation to it '''
+    # reference: https://www.geeksforgeeks.org/mutation-algorithms-for-real-valued-parameters-ga/
+    
     morph = copy.deepcopy(morph)
     
     index = random.choice(range(len(morph)))
