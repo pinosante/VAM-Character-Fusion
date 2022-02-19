@@ -171,7 +171,7 @@ class AppWindow(tk.Frame):
         if len(filenames) == 0: # user did not select files
             self.GUIchoices['filename' + str(number)] = ""
             self.GUIchoices['filename_label' + str(number)] = ""
-            self.openfile['Parent '+str(number)]['label'].configure(text = "")
+            self.parentbutton['Parent '+str(number)]['label'].configure(text = "")
             self.totalmorphs['Parent '+str(number)]['value'].configure(text = "N/A")   
             
             # if the the hidegeneratechild does not exist (allowing the user to click on the generate child button)
