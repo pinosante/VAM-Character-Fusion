@@ -8,14 +8,20 @@ Do the same for the right silhouette.
 At this point the "Generate Child" button will become green.
 Click on it.
 Congratulations!
-You now have a "Child" of both parent appearances (left and right) in the last folder you used when loading an appearance. It is named "Preset_Child.vap". Notice, that it doesn't have a thumbnail, since this script is unable to generate thumbnails.
+You now have a "Child" of both parent appearances (left and right) in the last folder you used when loading an appearance. It is named "Preset_Child.vap" and it has a fancy generic "VAM Character Fusion Child" thumbnail.
 
 # What do the options do?
+**Save filename**
+
+By default each child is named Child (Preset_Child.vap to be precise). But you can use your own custom name if you want.
+
 **Parent Template**
+
 This lets you choose which appearance file you want to use as the base appearance for your child. The child will inherit from the chosen parent appearance file: the  clothing, hair, eyes, makeup, skin, height, etc. Basically everything which is *not* a morph. The only changed values for the child, will be the new morphs chosen from both parents.
 Available choices are: Parent 1 (child's will only use this as a template), Parent 2 (child's will only use this as a template), or Random Parent (each child will randomly use the appearance of Parent 1 or Parent 2 as a template).
 
 **Remove morphs with absolute value below**
+
 Some appearances have a lot of morphs which are really close to zero. If you would keep those, there is a lot of morphs which would not do anything for the child when chosen or mutated. For this reason I'd advice to set this value to something like 0.01 to make sure to delete the most insignificant morphs from the appearance, resulting in more variation in the childs you create. If you want to keep all the morphs, just enter 0 in this box or keep it empty even.
 
 # How does your program work?
