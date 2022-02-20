@@ -1,14 +1,14 @@
 # VAM-Character-Fusion
 Take two Virtuamate characters and fuse them together to create a child character with properties (morphs) of both parents.
 
-# What does this do?
-When you start the app, click on the left silhouette, and go to your Virtuamate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
-Click on the appearance you want to load.
-Do the same for the right silhouette.
-At this point the "Generate Child" button will become green.
-Click on it.
-Congratulations!
-You now have a "Child" of both parent appearances (left and right) in the last folder you used when loading an appearance. It is named `Preset_Child.vap` and it has a fancy generic "VAM Character Fusion Child" thumbnail.
+# How do I use this?
+1. When you start the app, click on the left silhouette, and go to your Virtuamate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
+2. Click on the appearance you want to load.
+3. Do the same for the right silhouette.
+4. Now the "Generate Child" button will become green, click on it.
+5. Congratulations! You now have a beautiful "Child" of both parent appearances (left and right). 
+
+You can find the Child appearance card in the last folder you used when loading an appearance. It is named `Preset_Child.vap` and it has a fancy generic "VAM Character Fusion Child" thumbnail.
 
 # What do the options do?
 **Save filename**
