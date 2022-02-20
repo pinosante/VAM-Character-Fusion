@@ -1,5 +1,5 @@
 # VAM-Character-Fusion <img align="right" width="400" height="658" src="https://i.imgur.com/alovBTG.png">
-Create beatiful girls for Virt-A-Mate by fusing two parent appearances using a genetic algorithm.
+Create beatiful people (males and females!) for Virt-A-Mate by fusing two parent appearances using a genetic algorithm.
 <details>
   <summary>Warning: NSFW preview video link below (click here to reveal)</summary>
   https://redgifs.com/ifr/awesomesuddenafricanparadiseflycatcher
