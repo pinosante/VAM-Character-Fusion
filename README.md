@@ -42,7 +42,7 @@ Thanks for asking! In a nutshell it works like this.
 7. If a morph is new for an appearance (because it originally came from the other appearance), set it 0.
 8. Now we do crossover: create the morphs for the child, by looping through all the available morphs in the list from (5) and randomly copying the values from this morph from either parent 1 or parent 2.
 9. After that, apply mutation: this is a non uniform mutation. This link explains how it works https://www.geeksforgeeks.org/mutation-algorithms-for-real-valued-parameters-ga/. Very simply put, you choose one morph at random and change its number while making sure the random chosen number stays between 0.0 and 1.0. By the way, `b = 0.5` is used as a parameter.
-10. Choose the appearance either from parent 1 or parent 2 (depending on the choice for "parent template" by the user.
+10. Choose the appearance either from parent 1 or parent 2 (depending on the choice for "parent template" by the user).
 11. Overwrite the morphs from that appearance by the generated morphs for the child.
 12. Save the new child appearance.
 
