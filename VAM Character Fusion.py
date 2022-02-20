@@ -14,8 +14,11 @@ APP_WIDTH = 400
 APP_HEIGHT = 628
 APP_HORIZONTAL_OFFSET = 300
 APP_VERTICAL_OFFSET = 300
-NO_THUMBNAIL_PATH = r"no_thumbnail.jpg"
-CHILD_THUMBNAIL_PATH = r"child_thumbnail.jpg" 
+NO_THUMBNAIL_FILENAME = "no_thumbnail.jpg"
+CHILD_THUMBNAIL_FILENAME = "child_thumbnail.jpg" 
+ICON_FILENAME = "VAM Character Fusion.ico"
+SETTINGS_FILENAME = "settings.json"
+DATA_PATH = "data"
 
 class AppWindow(tk.Frame):
     def __init__(self):
@@ -39,7 +42,7 @@ class AppWindow(tk.Frame):
             title['Parent '+str(i)].grid(row=0, column=i-1, sticky=tk.W, pady=(0,0))
 
         # empty image for on the buttons
-        image = Image.open(NO_THUMBNAIL_PATH)
+        image = Image.open(os.path.join(DATA_PATH, NO_THUMBNAIL_FILENAME))
         image = image.resize(THUMBNAIL_SIZE, Image.ANTIALIAS)
         no_thumbnail = ImageTk.PhotoImage(image)
         
@@ -98,12 +101,13 @@ class AppWindow(tk.Frame):
         
         # track if the treshold values are changed by the user and if so, update the morph info based on the setting
         self.treshold_var = tk.DoubleVar()
+        self.treshold_var.set(0.01)
         self.treshold_var.trace_add("write", self.track_treshold_change)
         
         self.treshold_entry = tk.Entry(self.optionsframe, textvariable=self.treshold_var, width=7)
         self.treshold_entry.grid(row=3, column=1, sticky=tk.W)
 
-        self.treshold_label = tk.Label(self.optionsframe, text="(0.0 = keep all)")
+        self.treshold_label = tk.Label(self.optionsframe, text="(0 = keep all)")
         self.treshold_label.grid(row=3, column=2, sticky=tk.W)        
 
         ###
@@ -204,7 +208,7 @@ class AppWindow(tk.Frame):
         
     def update_thumbnail_image(self, number, path):
         if not os.path.exists(path):
-            path = NO_THUMBNAIL_PATH
+            path = os.path.join(DATA_PATH, NO_THUMBNAIL_FILENAME)
         image = Image.open(path)
         image = image.resize(THUMBNAIL_SIZE, Image.ANTIALIAS)
         thumbnail = ImageTk.PhotoImage(image)    
@@ -252,7 +256,7 @@ class AppWindow(tk.Frame):
             dir_path = os.path.dirname(sys.executable)
         elif __file__:
             dir_path = os.path.dirname(os.path.realpath(__file__))
-        filename = os.path.join(dir_path, "settings.json")
+        filename = os.path.join(dir_path, DATA_PATH, SETTINGS_FILENAME)
         with open(filename, 'w') as json_file:
             print("Writing settings to:", filename)
             json.dump(self.settings, json_file, indent=3)
@@ -263,7 +267,7 @@ class AppWindow(tk.Frame):
             dir_path = os.path.dirname(sys.executable)
         elif __file__:
             dir_path = os.path.dirname(os.path.realpath(__file__))
-        filename = os.path.join(dir_path, "settings.json")
+        filename = os.path.join(dir_path, DATA_PATH, SETTINGS_FILENAME)
         if os.path.isfile(filename):
             with open(filename) as f:
                 print("Reading settings from:", filename)
@@ -284,7 +288,7 @@ def save_appearance(appearance, filename):
         json.dump(appearance, json_file, indent=3)
     # copy a vam character fusion thumbnail as well
     thumbnailpath = os.path.splitext(filename)[0]+'.jpg'
-    shutil.copyfile(CHILD_THUMBNAIL_PATH, thumbnailpath)
+    shutil.copyfile(os.path.join(DATA_PATH, CHILD_THUMBNAIL_FILENAME), thumbnailpath)
     return True    
     
 
@@ -335,6 +339,7 @@ def add_mnames_to_morphs(morphs, merged_mnames):
           
 def intuitive_crossover(morph1, morph2):
     ''' returns a new morph which is the combined morph of morph1 and morph2 where each gene has 0.5 chance to be selected '''
+    # reference: https://towardsdatascience.com/unit-3-genetic-algorithms-part-1-986e3b4666d7
     new_morph = []
     for i in range(len(morph1)):
         if random.randint(0, 1):
@@ -464,7 +469,7 @@ def main():
     app_dimensions = str(APP_WIDTH)+"x"+str(APP_HEIGHT)+"+"+str(APP_HORIZONTAL_OFFSET)+"+"+str(APP_VERTICAL_OFFSET)
     
     root.geometry(app_dimensions)
-    root.iconbitmap("VAM Character Fusion.ico")    
+    root.iconbitmap(os.path.join(DATA_PATH, ICON_FILENAME))
     app = AppWindow()
 
     app.settings = {}
