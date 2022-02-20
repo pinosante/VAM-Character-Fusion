@@ -1,5 +1,5 @@
 # VAM-Character-Fusion <img align="right" width="400" height="658" src="https://i.imgur.com/alovBTG.png">
-Create a beatiful girl for Virt-A-Mate by fusing two parent appearances using a genetic algorithm.
+Create beatiful girls for Virt-A-Mate by fusing two parent appearances using a genetic algorithm.
 
 # How do I use this?
 1. When you start the app, click on the left silhouette, and go to your Virtuamate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
