@@ -2,7 +2,7 @@
 Create beatiful girls for Virt-A-Mate by fusing two parent appearances using a genetic algorithm.
 
 # How do I use this?
-1. When you start the app, click on the left silhouette, and go to your Virtuamate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
+1. When you start the app, click on the left silhouette, and go to your Virt-A-Mate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
 2. Click on the appearance you want to load.
 3. Do the same for the right silhouette.
 4. Now the "Generate Child" button will become green, click on it.
