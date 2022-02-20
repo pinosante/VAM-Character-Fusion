@@ -1,5 +1,5 @@
-# VAM-Character-Fusion
-Take two Virtuamate characters and fuse them together to create a child character with properties (morphs) of both parents.
+# VAM-Character-Fusion <img align="right" width="400" height="658" src="https://i.imgur.com/alovBTG.png">
+Take two Virtuamate characters and fuse them together to create a child character with properties (morphs) of both parents. 
 
 # How do I use this?
 1. When you start the app, click on the left silhouette, and go to your Virtuamate Appearance directory (e.g.: `C:\VaM\Custom\Atom\Person\Appearance` or something).
