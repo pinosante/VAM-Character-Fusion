@@ -22,7 +22,7 @@ Available choices are: Parent 1 (child's will only use this as a template), Pare
 
 **Remove morphs with absolute value below**
 
-Some appearances have a lot of morphs which are really close to zero. If you would keep those, there is a lot of morphs which would not do anything for the child when chosen or mutated. For this reason I'd advice to set this value to something like 0.01 to make sure to delete the most insignificant morphs from the appearance, resulting in more variation in the childs you create. If you want to keep all the morphs, just enter 0 in this box or keep it empty even.
+Some appearances have a lot of morphs which are really close to zero. If you would keep those, there is a lot of morphs which would not do anything for the child when chosen or mutated. For this reason I'd advice to set this value to something like 0.01 to make sure to delete the most insignificant morphs from the appearance, resulting in more variation in the childs you create. If you want to keep all the morphs, just enter 0 in this box or keep it empty.
 
 # How does your program work?
 Thanks for asking! In a nutshell it works like this.
@@ -40,7 +40,7 @@ Thanks for asking! In a nutshell it works like this.
 12. Save the new child appearance.
 
 # Are you a professional coder?
-Hah! If you would look at the code, you would know the answer. Which is: NO.
+Hah! If you would look at the code, you would know the answer. Which is: no.
 
 # Can I help you, or give feedback on your code?
 Yes, please. I'd love to improve my coding skills.
