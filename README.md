@@ -24,6 +24,9 @@ Available choices are: Parent 1 (child's will only use this as a template), Pare
 
 Some appearances have a lot of morphs which are really close to zero. If you would keep those, there is a lot of morphs which would not do anything for the child when chosen or mutated. For this reason I'd advice to set this value to something like 0.01 to make sure to delete the most insignificant morphs from the appearance, resulting in more variation in the childs you create. If you want to keep all the morphs, just enter 0 in this box or keep it empty.
 
+# What do I do with the Morph information?
+Here the total amount of morphs found in each parent is shown (after removing all morphs with an absolute value below the set treshold). This is a good indicator of the amount of custom morphs the parent has. If a parent has a small amount of morphs (say, smaller than 50), there is a big chance that the "look" has been saved into a few custom morphs especially for this character. Parents with such specific custom morphs are not really suited for child generation since there is only 1 or 2 "genes" which decide the look, the custom morph. Long story short: try to use parents with a total amount of morphs, larger than, say 100. You can do that by looking at the Morph information when you load your parents.
+
 # How does your program work?
 Thanks for asking! In a nutshell it works like this.
 1. Load two appearances.
